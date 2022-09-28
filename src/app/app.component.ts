@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-devextreme';
+  isLogged = false;
+
+  constructor() {
+
+  }
+  onSignIn(){
+    this.isLogged = true;
+  }
+  onLogout(){
+    this.isLogged = false;
+  }
 }

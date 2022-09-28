@@ -1,0 +1,46 @@
+  <div class="container px-10">
+    <div class="long-title">
+      <h1>Employee Details</h1>
+
+    </div>
+    <dx-form [formData]="perfil" >
+
+      <dxi-item itemType="group" [colCount]="2">
+        <dxi-item dataField="name" editorType="dxTextBox" [editorOptions]="{disabled:true}">
+          <dxo-label text="Nombre"></dxo-label>
+        </dxi-item>
+
+        <dxi-item dataField="position" editorType="dxTextBox" >
+          <dxo-label text="Posición"></dxo-label>
+        </dxi-item>
+
+        <dxi-item dataField="lastname" editorType="dxTextBox"  [editorOptions]="{disabled:true}">
+          <dxo-label text="Apellido"></dxo-label>
+        </dxi-item>
+
+        <dxi-item dataField="date" editorType="dxDateBox" >
+          <dxo-label text="Fecha de nacimiento"></dxo-label>
+        </dxi-item>
+
+        <dxi-item dataField="hireDate" editorType="dxDateBox">
+          <dxo-label text="Fecha de contratación"></dxo-label>
+        </dxi-item>
+
+        <dxi-item dataField="address" editorType="dxTextBox">
+          <dxo-label text="Address"></dxo-label>
+        </dxi-item>
+
+        <dxi-item
+        dataField="phone"> <dxo-label text="Celular"></dxo-label>
+      </dxi-item>
+        <dxi-item
+        dataField="email"> <dxo-label text="Email"></dxo-label>
+      </dxi-item>
+
+
+
+      </dxi-item>
+
+    </dx-form>
+
+  </div>

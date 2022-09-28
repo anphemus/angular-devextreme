@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+h1{
+  font-size: 30px;
+}
+.container{
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  display: flex;
+  width: 375px;
+  height: 100vh;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container > div{
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  width: 375px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container > div > div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+.container > div >div > h1{
+  color: var(--Dark-blue);
+}
+.container >div > div > p{
+  color: var(--Desaturated-blue);
+}
+
+.input-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.input-container input{
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 10px;
+}
+
+.login button{
+  width: 100%;
+  height: 50px;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: var(--Bright-blue);
+  border: none;
+  border-radius: 10px;
+}
+.login a:last-child{
+  color: var(--Desaturated-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.change:hover{
+  text-decoration: none;
+  color: hsl(245, 75%, 65%);
+}
+.login button:hover{
+  background-color: hsl(245, 75%, 65%);
+  cursor: pointer;
+}
+.login a:last-child:hover{
+  color: var(--Dark-blue);
+}
