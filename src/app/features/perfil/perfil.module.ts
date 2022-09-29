@@ -11,6 +11,7 @@ import { DxButtonModule, DxFormModule,} from 'devextreme-angular';
     CommonModule,
     DxFormModule,
     DxButtonModule,
-  ],exports: [perfilComponent]
+  ],
+  exports: [perfilComponent]
 })
 export class perfilModule { }

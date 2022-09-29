@@ -1,5 +1,6 @@
-
-<app-login *ngIf="!isLogged" (signIn)="onSignIn()"></app-login>
+<app-login *ngIf="!isLogged" (login)="onSignIn()"></app-login>
+<app-bar-graph *ngIf="isLogged"></app-bar-graph>
+<app-bar-chart *ngIf="isLogged"></app-bar-chart>
 <app-dashboard *ngIf="isLogged" (logout)="onLogout()"></app-dashboard>
 <app-perfil *ngIf="isLogged"></app-perfil>
 

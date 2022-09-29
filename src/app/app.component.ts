@@ -15,7 +15,9 @@ export class AppComponent {
   onSignIn(){
     this.isLogged = true;
   }
+
   onLogout(){
     this.isLogged = false;
   }
+  
 }

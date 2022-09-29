@@ -1,21 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { perfilModule } from './features/perfil/perfil.module';
+import { LoginModule } from './features/login/login.module';
+//components
 
 import { AppComponent } from './app.component';
-import { perfilModule } from './features/perfil/perfil.module';
-import { LoginComponent } from './features/login/login.component';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { BarChartComponent } from './features/bar-chart/bar-chart.component';
+import { BarGraphComponent } from './features/bar-graph/bar-graph.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     DashboardComponent,
+    BarChartComponent,
+    BarGraphComponent,
   ],
   imports: [
     BrowserModule,
-    perfilModule
+    perfilModule,
+    LoginModule
   ],
 
 
