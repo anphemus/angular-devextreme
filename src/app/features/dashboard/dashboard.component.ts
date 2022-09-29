@@ -10,6 +10,7 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
   onClickLogout(){
     this.logout.emit(true);
