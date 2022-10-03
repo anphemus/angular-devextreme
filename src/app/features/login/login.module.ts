@@ -12,7 +12,7 @@ import { DxTextBoxModule, DxValidatorModule, DxButtonModule} from 'devextreme-an
     CommonModule,
     DxButtonModule,
     DxTextBoxModule,
-    DxValidatorModule
+    DxValidatorModule,
   ],
   exports: [ LoginComponent ]
 })

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import Chart from 'chart.js/auto';
 
 @Component({
@@ -6,14 +6,22 @@ import Chart from 'chart.js/auto';
   templateUrl: './bar-graph.component.html',
   styleUrls: ['./bar-graph.component.css']
 })
-export class BarGraphComponent implements OnInit {
+export class BarGraphComponent implements OnInit, OnDestroy, OnChanges {
   public chart: any;
   constructor() { }
-
+  ngOnChanges(changes: SimpleChanges): void {
+  }
   ngOnInit(): void {
+    console.log('creacion del chart');
     this.createChart();
   }
+  ngOnDestroy(): void {
+    console.log('el bar-graph desaparece');
 
+  }
+
+
+  
   createChart(){
 
     this.chart = new Chart("MyChart2", {

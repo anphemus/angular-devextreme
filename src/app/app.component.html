@@ -1,15 +1,21 @@
-<nav class="absolute flex w-full h-[60px] px-3 left-0 bg-violet-500 justify-between items-center" *ngIf=" isLogged">
+<!-- <nav class="absolute flex w-full h-[60px] px-3 left-0 bg-violet-500 justify-between items-center" *ngIf=" isLogged">
   <ul class="flex gap-5 text-white list-none	">
-    <li><a class="hover:text-white cursor-pointer font-bold">Dashboard</a></li>
-    <li><a class="hover:text-white cursor-pointer font-bold">Perfil</a></li>
+    <li><a class="hover:text-white cursor-pointer font-bold" (click)="onDasboard()">Dashboard</a></li>
+    <li><a class="hover:text-white cursor-pointer font-bold" (click)="onPerfil()">Perfil</a></li>
   </ul>
-  <button class="text-white font-bold" (click)="onLogout()">Log out</button>
+  <div class="flex gap-5 text-white font-bold items-center">
+    <span>{{username}}</span>
+    <button class="text-white font-bold" (click)="onLogout()">Log out</button>
+  </div>
 </nav>
-<app-login *ngIf="!isLogged" (login)="onSignIn()"></app-login>
-<div class="w-full h-[100vh] flex items-center justify-center mx-auto gap-10 flex-wrap pt-[100px]" *ngIf="isLogged">
+<app-login *ngIf="!isLogged" (login)="onSignIn($event)"></app-login>
+
+<div class="w-full h-[100vh] flex items-center justify-center mx-auto gap-10 flex-wrap pt-[100px]" *ngIf="isLogged && dashboardOn">
   <app-bar-graph class="max-w-[500px] w-[500px]"></app-bar-graph>
   <app-bar-chart class="max-w-[500px] w-[500px]"></app-bar-chart>
 </div>
 
-<app-perfil *ngIf="isLogged"></app-perfil>
+<app-perfil class="w-full h-[100vh] flex items-center justify-center mx-auto flex-wrap pt-[100px]"  *ngIf="isLogged && perfilOn"></app-perfil>
 
+ -->
+<app-datagrid></app-datagrid>
