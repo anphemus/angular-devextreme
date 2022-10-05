@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -6,15 +6,23 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  @Output() signIn: EventEmitter<boolean> = new EventEmitter();
-  constructor() { }
+  @ViewChild('username') user: any;
+  @Output() login = new EventEmitter<string>();
 
-  ngOnInit(): void {
+  constructor() {
   }
 
-  onClickLogin(){
-    this.signIn.emit(true);
+  ngOnInit(): void {
+
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.user.value.toString());
+  }
+
+
+  loginClick(){
+    this.login.emit(this.user.value.toString());
   }
 
 }
-

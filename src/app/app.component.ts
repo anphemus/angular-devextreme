@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,16 +6,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  username: string = "";
   title = 'angular-devextreme';
   isLogged = false;
-
+  dashboardOn = false;
+  perfilOn = false;
   constructor() {
 
   }
-  onSignIn(){
-    this.isLogged = true;
+  onSignIn(event:any){
+    if(event != ""){
+      this.isLogged = true;
+      this.username = "@"+event;
+    }
   }
+
   onLogout(){
     this.isLogged = false;
+    this.dashboardOn = false;
+    this.perfilOn = false;
   }
+
+  onDasboard(){
+    this.dashboardOn = true;
+    this.perfilOn = false;
+  }
+  onPerfil(){
+    this.perfilOn = true;
+    this.dashboardOn= false;
+  }
+
 }

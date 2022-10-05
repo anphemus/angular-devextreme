@@ -1,21 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
 import { perfilModule } from './features/perfil/perfil.module';
-import { LoginComponent } from './features/login/login.component';
-import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { LoginModule } from './features/login/login.module';
+import { DxDataGridModule } from 'devextreme-angular';
+
+//components
+import { AppComponent } from './app.component';
+import { BarChartComponent } from './features/bar-chart/bar-chart.component';
+import { BarGraphComponent } from './features/bar-graph/bar-graph.component';
+import { DatagridComponent } from './features/datagrid/datagrid.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    DashboardComponent,
+    BarChartComponent,
+    BarGraphComponent,
+    DatagridComponent,
   ],
   imports: [
     BrowserModule,
-    perfilModule
+    perfilModule,
+    LoginModule,
+    DxDataGridModule
   ],
 
 

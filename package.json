@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "chart.js": "^3.9.1",
     "devextreme": "22.1.5",
     "devextreme-angular": "22.1.5",
     "rxjs": "~7.5.0",

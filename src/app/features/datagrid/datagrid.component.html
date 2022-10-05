@@ -1,0 +1,28 @@
+
+<div class="h-full flex justify-center items-center">
+  <dx-data-grid [dataSource]="jsonUrl2"
+  [allowColumnReordering]="true"
+  [columnAutoWidth]="true"
+  [allowColumnResizing]="true"
+  [showBorders]="true"
+
+  >
+  <dxo-column-fixing [enabled]="true"></dxo-column-fixing>
+  <dxi-column dataField="FullName" [fixed]="true" ></dxi-column>
+  <dxi-column dataField="Position" ></dxi-column>
+  <dxi-column
+  dataField="BirthDate"
+  dataType="date">
+</dxi-column>
+<dxi-column
+dataField="HireDate"
+dataType="date">
+</dxi-column>
+<dxi-column dataField="City" ></dxi-column>
+<dxi-column dataField="Country" [width]="100"></dxi-column>
+<dxi-column dataField="Address"></dxi-column>
+<dxi-column dataField="HomePhone"></dxi-column>
+<dxi-column dataField="PostalCode"></dxi-column>
+</dx-data-grid>
+</div>
+

@@ -1,24 +1,36 @@
+<div class="w-1/1 h-screen text-center flex flex-col items-center justify-center ">
 
-  <div class="container">
-    <div>
-      <div>
-        <h1>Login</h1>
-        <p>Please sign-in to your account and start the adventure
-        </p>
-      </div>
-      <div>
-        <div class="input-container">
-          <input type="text" placeholder="Username">
-        </div>
-        <div class="input-container">
-          <input type="password" placeholder="Password">
+  <div class="w-[375px] h-96 flex flex-col gap-10 justify-center bg-white rounded-2xl">
 
-        </div>
-      </div>
-      <div class="login">
-        <a href="#"><button (click)="onClickLogin()">LOGIN</button></a>
-        <div><span>New on our platform? </span>   <a href="#">Create a count</a></div>
-      </div>
-    </div>
+    <h1 class="text-4xl">LOGIN</h1>
+
+    <form class="flex flex-col gap-5 items-center">
+
+    <dx-text-box class="w-[250px] rounded-sm" placeholder="Username" value="" #username>
+        <dx-validator>
+            <dxi-validation-rule type="required" ></dxi-validation-rule>
+        </dx-validator>
+    </dx-text-box>
+
+
+    <dx-text-box  mode="password" class="w-[250px] rounded-xl" placeholder="Password" >
+        <dx-validator>
+            <dxi-validation-rule type="required"></dxi-validation-rule>
+        </dx-validator>
+    </dx-text-box>
+
+
+    <dx-button class="w-[250px] bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 font-bold text-white hover:scale-105"
+        text="Log in"
+        type="button"
+        [useSubmitBehavior]="true"
+        (click)="loginClick()"
+        >
+    </dx-button>
+
+
+</form>
+
   </div>
 
+</div>
